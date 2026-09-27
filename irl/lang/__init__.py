@@ -1,0 +1,30 @@
+# IRL™ 🌱 - Software for Humans
+# Copyright (C) 2026 Anika Mukherjee
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Affero General Public License as published
+# by the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+"""The .irl language — 2.1 "Full Language Edition".
+
+Python's words with C's braces: var/function/if/elif/while/for, floats,
+f-strings, dicts, memo functions, stdlib imports. Legacy slang aliases
+(snag/spill/bet/cap/grind/brb/task) still run.
+
+Exposed: lex, parse, evaluate, Interpreter, and the error types.
+"""
+
+from .interpreter import Interpreter, IrlRuntimeError, evaluate
+from .lexer import IrlSyntaxError, lex
+from .parser import parse
+
+__all__ = ["lex", "parse", "evaluate", "Interpreter", "IrlSyntaxError", "IrlRuntimeError"]
